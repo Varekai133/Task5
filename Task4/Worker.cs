@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Task4
 {
-    public class Worker
+    public class Worker : IDraw
     {
         public int x;
         public int speed;
@@ -18,7 +18,7 @@ namespace Task4
             this.speed = speed;
         }
 
-        public void DrawAll(int ws, int hs, Bitmap bmp, Graphics g)
+        public void Setup(int ws, int hs, Bitmap bmp, Graphics g)
         {
             Draw(ws, hs, bmp, g);
             Update(ws);

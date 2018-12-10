@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Task4
 {
-    public class LoarderForFurnace : Loarder
+    public class LoarderForFurnace : Loarder, IDraw
     {
         public int speed;
         public int x;
@@ -31,11 +31,8 @@ namespace Task4
             isReady = false;
         }
 
-        public void DrawAll(int ws, int hs, Bitmap bmp, Graphics g)
+        public void Setup(int ws, int hs, Bitmap bmp, Graphics g)
         {
-            //Move(ws);
-            //Draw(ws, hs, bmp, g);
-
             Dangerous(ws, hs, bmp, g);
         }
 
@@ -77,7 +74,6 @@ namespace Task4
                 Move(ws);
                 Draw(ws, hs, bmp, g);
             }
-            
         }
     }
 }

@@ -33,10 +33,10 @@ namespace Task4
         {
             thrl = new Thread(LoarderThr);
             thrl.Start();
-            thrw = new Thread(WorkerThr);
-            thrw.Start();
             thrf = new Thread(FurnaceThr);
             thrf.Start();
+            thrw = new Thread(WorkerThr);
+            thrw.Start();
         }
 
         public void Setup(int ws, int hs, Bitmap bmp, Graphics g)

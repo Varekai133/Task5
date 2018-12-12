@@ -13,13 +13,14 @@ namespace Task4
     {
         Graphics g;
         Bitmap bmp;
-        Thread thrl, thrw, thrf;
+        Thread thrl, thrw, thrf, thrs;
 
         int ws, hs;
 
         Worker worker = new Worker(0, 5);
         BlastFurnace blastfurnace = new BlastFurnace(170, 100, 40, 0);
         LoarderForFurnace loarder = new LoarderForFurnace(0, true, 7, 0.1);
+        Smoke smoke = new Smoke();
         
         public Decorator(int ws, int hs, Bitmap bmp, Graphics g)
         {
@@ -37,13 +38,23 @@ namespace Task4
             thrf.Start();
             thrw = new Thread(WorkerThr);
             thrw.Start();
+            thrs = new Thread(SmoteThr);
+            thrs.Start();
+               
+
         }
 
         public void Setup(int ws, int hs, Bitmap bmp, Graphics g)
         {
-            worker.Setup(ws, hs, bmp, g);
+            smoke.Setup(ws, hs, bmp, g);
             blastfurnace.Setup(ws, hs, bmp, g);
             loarder.Setup(ws, hs, bmp, g);
+            worker.Setup(ws, hs, bmp, g);
+        }
+
+        private void SmoteThr()
+        {
+            smoke.Setup(ws, hs, bmp, g);
         }
 
         private void WorkerThr()

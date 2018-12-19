@@ -18,7 +18,7 @@ namespace Task4
         int ws, hs;
 
         Decorator decorator;
-
+        public delegate void MyDelegate();
 
         public MainForm()
         {
@@ -26,16 +26,16 @@ namespace Task4
             ws = MainPB.Width;
             hs = MainPB.Height;
             bmp = new Bitmap(ws, hs);
-            decorator = new Decorator(ws, hs, bmp, g);
+            decorator = new Decorator(ws, hs, bmp, g, this);
             decorator.Setup();
-            timer1.Enabled = true;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void MainPB_Paint(object sender, PaintEventArgs e)
         {
             bmp = new Bitmap(ws, hs);
             decorator.Setup(ws, hs, bmp, g);
             MainPB.Image = bmp;
+            Thread.Sleep(100);
         }
     }
 }

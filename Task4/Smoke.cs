@@ -11,6 +11,7 @@ namespace Task4
     {
         public int x;
         public int y;
+        public Color color;
 
         bool vis = true;
         
@@ -61,7 +62,7 @@ namespace Task4
             {
                 for (int i = 0; i < 5; i++)
                 {
-                    g.FillEllipse(Brushes.Gray, smoke[i].x, smoke[i].y, 10, 10);
+                    g.FillEllipse(new SolidBrush(color), smoke[i].x, smoke[i].y, 10, 10);
                 }
             }
         }

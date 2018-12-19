@@ -13,6 +13,7 @@ namespace Task4
         public int x;
         public bool isReady;
         public double prob;
+        public bool broke;
 
         public delegate void NoMaterials();
         public event NoMaterials NoMaterial;
@@ -24,6 +25,7 @@ namespace Task4
             this.isReady = isReady;
             this.prob = prob;
             NoMaterial = NoMater;
+            broke = false;
         }
 
         public void NoMater()
@@ -49,6 +51,8 @@ namespace Task4
 
         public void Move(int ws)
         {
+            //if (broke)
+            //    return;
             if (x < ws)
                 x += speed;
             else
@@ -68,12 +72,14 @@ namespace Task4
         {
             if (isReady)
                 prob = Probability();
-            if (prob > 0.98)
+            if (prob > 0.9)
             {
+                broke = true;
                 NoMaterial();
                 Move(ws);
                 Draw(ws, hs, bmp, g);
             }
+            
         }
     }
 }

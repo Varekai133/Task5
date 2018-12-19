@@ -1,0 +1,10 @@
+C:\Users\Kat\Desktop\2 курс о.о\ЯиСП\Task4\Task4\bin\Debug\Task4.exe.config
+C:\Users\Kat\Desktop\2 курс о.о\ЯиСП\Task4\Task4\bin\Debug\Task4.exe
+C:\Users\Kat\Desktop\2 курс о.о\ЯиСП\Task4\Task4\bin\Debug\Task4.pdb
+C:\Users\Kat\Desktop\2 курс о.о\ЯиСП\Task4\Task4\obj\Debug\Task4.csprojResolveAssemblyReference.cache
+C:\Users\Kat\Desktop\2 курс о.о\ЯиСП\Task4\Task4\obj\Debug\Task4.MainForm.resources
+C:\Users\Kat\Desktop\2 курс о.о\ЯиСП\Task4\Task4\obj\Debug\Task4.Properties.Resources.resources
+C:\Users\Kat\Desktop\2 курс о.о\ЯиСП\Task4\Task4\obj\Debug\Task4.csproj.GenerateResource.Cache
+C:\Users\Kat\Desktop\2 курс о.о\ЯиСП\Task4\Task4\obj\Debug\Task4.csproj.CoreCompileInputs.cache
+C:\Users\Kat\Desktop\2 курс о.о\ЯиСП\Task4\Task4\obj\Debug\Task4.exe
+C:\Users\Kat\Desktop\2 курс о.о\ЯиСП\Task4\Task4\obj\Debug\Task4.pdb
